@@ -31,7 +31,7 @@ const Contact = () => {
                                 <span className="clickInput" onClick={()=>{
                                     alert("Email copié !");
                                 }}>
-                                moseswise96658434@gmail.com
+                                moseswisegit@gmail.com
                                 </span>
                             </CopyToClipboard>
                         </li>
