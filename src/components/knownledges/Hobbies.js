@@ -1,35 +1,29 @@
-import React from 'react';
+import React from "react";
 
 const Hobbies = () => {
-    return (
-        <div className="hobbies">
-            <h3>Intérêt</h3>
-            <ul>
-                <li>
-                    <i className="fas fa-running"></i> 
-                    <span> Course à pied </span>
-                </li>
-                <li>
-                    <i className="fab fa-bitcoin"></i> 
-                    <span> Crypto-monnaie </span>
-                </li>
-                <li>
-                    <i className="fas fa-seedling"></i> 
-                    <span> Permaculture</span>
-                </li>
-                <li>
-                    <i className="fas fa-rocket"></i> 
-                    <span> Espace </span>
-                </li>
-                <li>
-                    <i className="fas fa-hiking"></i> 
-                    <span> Randonnées </span>
-                </li>
-                
-            </ul>
-           
-        </div>
-    );
+  return (
+    <div className="hobbies">
+      <h3>Intérêt</h3>
+      <ul>
+        <li>
+          <i className="fas fa-running"></i>
+          <span> Course à pied </span>
+        </li>
+        <li>
+          <i className="fas fa-file-alt"></i>
+          <span> Lecture </span>
+        </li>
+        <li>
+          <i className="fas fa-gamepad"></i>
+          <span> Jeux vidéos</span>
+        </li>
+        <li>
+          <i className="fas fa-drum"></i>
+          <span> Musique </span>
+        </li>
+      </ul>
+    </div>
+  );
 };
 
 export default Hobbies;

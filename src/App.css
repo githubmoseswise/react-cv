@@ -1,0 +1,39 @@
+/* App.css */
+
+/* Assurez-vous que le body et le html occupent toute la hauteur */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  #root {
+    display: flex;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  }
+  
+  .sidebar {
+    position: fixed;
+    width: 200px; /* Largeur du sidebar */
+    top: 0;
+    bottom: 0;
+    background-color: #f0f0f0;
+    overflow-y: auto; /* Permet le défilement si nécessaire */
+  }
+  
+  .main-content {
+    margin-left: 200px; /* Largeur du sidebar gauche */
+    margin-right: 200px; /* Largeur du sidebar droit */
+    flex: 1; /* Prend tout l'espace restant */
+    overflow-y: auto; /* Permet le défilement si nécessaire */
+  }
+  
+  .sidebar-right {
+    position: fixed;
+    width: 200px; /* Largeur du sidebar */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f0f0f0;
+    overflow-y: auto; /* Permet le défilement si nécessaire */
+  }
+  

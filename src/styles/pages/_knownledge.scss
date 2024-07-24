@@ -15,6 +15,9 @@
         background: $color-2;
         border-radius: $borderRadius;
         padding: .8rem;
+        box-shadow: 
+        0 10px 46px rgba(0, 0, 0, 0.1), /* Ombre légère */
+        0 20px 40px rgba(0, 0, 0, 0.1); 
       }
       h3 {
         font-size: 1.4rem;
@@ -22,6 +25,29 @@
         font-family: $font-2;
         color: $color-5;
         text-transform: uppercase;
+      }
+
+      .square-bullets {
+        list-style: none; /* Supprime les puces par défaut */
+        padding: 0; /* Supprime le padding par défaut */
+      }
+      .square-bullets li {
+        position: relative;
+        padding-left: 2rem; /* Espace pour la puce */
+        margin-bottom: 0.5rem; /* Espace entre les éléments */
+        line-height: 1.5; /* Hauteur de ligne pour un meilleur espacement */
+      }
+
+      .square-bullets li::before {
+        content: ''; /* Pas de texte, juste une puce */
+        position: absolute;
+        left: 0; /* Aligne la puce à gauche */
+        top: 50%; /* Aligne la puce verticalement au centre de l'élément */
+        transform: translateY(-50%); /* Ajuste l'alignement vertical */
+        width: 10px; /* Largeur de la puce */
+        height: 10px; /* Hauteur de la puce */
+        background-color: #000; /* Couleur de la puce */
+        border-radius: 2px; /* Rend la puce carrée */
       }
   
       .languagesFrameworks {
@@ -48,7 +74,7 @@
           font-size: .65rem;
           display: flex;
           justify-content: space-between;
-          color: $white;
+          color: $black;
   
           span {
             width: 36%;
@@ -129,6 +155,7 @@
         p {
           text-align: justify;
           padding: 0 1rem;
+          font-size: 11px;
         }
         .exp-1 {
           grid-area: 2;
@@ -136,6 +163,8 @@
         .exp-2 {
           grid-area: 3;
         }
+
+        overflow-y: auto;
       }
       .otherSkills {
         grid-area: O;
