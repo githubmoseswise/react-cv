@@ -52,7 +52,7 @@ const Navigation = () => {
           </li>
           <li>
             <a
-              href="https://www.google.com"
+              href="https://github.com/githubmoseswise"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -80,7 +80,7 @@ const Navigation = () => {
         </ul>
 
         <div className="signature">
-          <p> Moses wise - 2023 </p>
+          <p> Moseswise - 2024 </p>
         </div>
       </div>
     </div>
