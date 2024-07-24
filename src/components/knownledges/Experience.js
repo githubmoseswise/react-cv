@@ -3,7 +3,7 @@ import React from "react";
 const Experience = () => {
   return (
     <div className="experience">
-      <h3> Experience</h3>
+      <h3> Experiences</h3>
       <div className="exp-1">
         <h4> SuperMap - Lead Développeur SIG | F&MMCI</h4>
         <h5>Jan. 2024 - présent (Cocody, Côte d'Ivoire)</h5>
