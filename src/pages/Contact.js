@@ -27,7 +27,7 @@ const Contact = () => {
                         </li>
                         <li> 
                             <i className="far fa-enveloppe"></i>
-                            <CopyToClipboard text="moseswise96658434@gmail.com">
+                            <CopyToClipboard text="moseswisegit@gmail.com">
                                 <span className="clickInput" onClick={()=>{
                                     alert("Email copié !");
                                 }}>
@@ -39,11 +39,11 @@ const Contact = () => {
                 </div>
                 <div className="socialNetwork">
                     <ul>
-                        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"> 
+                        <a href="https://www.linkedin.com/in/agbossagamoise/" target="_blank" rel="noopener noreferrer"> 
                             <h4> Linkedin</h4>
                             <i className="fab fa-linkedin"></i>
                         </a>
-                        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"> 
+                        <a href="https://github.com/githubmoseswise" target="_blank" rel="noopener noreferrer"> 
                             <h4> Github</h4>
                             <i className="fab fa-github"></i>
                         </a>
