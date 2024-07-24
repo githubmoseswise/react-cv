@@ -43,7 +43,7 @@ const Navigation = () => {
         <ul>
           <li>
             <a
-              href="https://www.google.com"
+              href="https://www.linkedin.com/in/agbossagamoise/"
               target="_blank"
               rel="noopener noreferrer"
             >
