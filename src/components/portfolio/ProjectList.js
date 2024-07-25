@@ -8,7 +8,7 @@ class ProjectList extends Component {
       { id: 1, value: "wordpress" },
       { id: 2, value: "react" },
       { id: 3, value: "Laravel" },
-      { id: 4, value: "React native" },
+      { id: 4, value: "R. native" },
     ],
     selectedRadio: "javascript",
   };
