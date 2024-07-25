@@ -35,7 +35,6 @@
         position: relative;
 
         &:before {
-          content:'';
           visibility: visible;
           position: absolute;
           top: -4px;
@@ -48,7 +47,6 @@
           transition: 0.3s;
         }
         &:after {
-          content:'';
           visibility: visible;
           position: absolute;
           top: -4px;
