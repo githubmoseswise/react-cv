@@ -10,7 +10,7 @@ class ProjectList extends Component {
       { id: 3, value: "Laravel" },
       { id: 4, value: "React native" },
     ],
-    selectedRadio: "javascript",
+    selectedRadio: "wordpress",
   };
 
   handleRadio = (event) => {

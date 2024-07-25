@@ -144,66 +144,132 @@
       }
     }
    
-    .showInfos {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.507);
-      animation: popup .3s ease forwards ;
-      transform-origin: center;
+    // .showInfos {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   background: rgba(0, 0, 0, 0.507);
+    //   animation: popup .3s ease forwards ;
+    //   transform-origin: center;
 
+    //   .infosContent {
+    //     position: relative;
+    //     top: 25%;
+    //     width: 500px;
+    //     margin: 0 auto;
+    //     color: $color-5;
+    //     background: $color-1;
+    //     border-radius: $borderRadius;
+    //     padding: 2rem;
+    //     box-shadow: 0 10px 10px #333;
+    //     animation: popup .6s ease forwards;
+    //     transform: scale(0);
+    //     transform-origin: center;
+
+    //     @keyframes popup {
+    //       to {
+    //         transform: scale(1);
+    //       } 
+    //     }
+    //   }
+    //   .head {
+    //     display: flex;
+    //     justify-content: space-around;
+    //     margin: 1rem 0;
+    //   }
+    //   h2 {
+    //     text-align: left;
+    //     margin-bottom: 1rem;
+    //   }
+    //   .button {
+    //     cursor: pointer;
+    //     color: $color-1;
+    //     background: $color-5;
+    //     border-radius: $borderRadius;
+    //     padding: 1rem;
+    //     transition: .2s;
+
+    //     &:hover {
+    //       background: $color-4;
+    //     }
+    //   }
+    //   .text {
+    //     text-align: justify;
+    //     padding-bottom: 1rem;
+    //   }
+    //   .return {
+    //     margin: 1rem auto;
+    //     width: 200px;
+    //   }
+    // }
+
+    .showInfos {
+      position: fixed; /* Change de absolute à fixed */
+      top: 50%;
+      left: 50%;
+      right: 50%;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.507);
+      animation: popup .3s ease forwards;
+      transform-origin: center;
+    
       .infosContent {
-        position: relative;
-        top: 25%;
+        position: absolute; /* Change de relative à absolute */
+        top: 50%; /* Centrer verticalement */
+        left: 50%; /* Centrer horizontalement */
+        transform: translate(-50%, -50%) scale(0); /* Centrer et appliquer scale */
         width: 500px;
-        margin: 0 auto;
-        color: $color-5;
-        background: $color-1;
-        border-radius: $borderRadius;
+        color:$color-5; /* Remplacez $color-5 par une couleur de texte appropriée */
+        background:$color-1; /* Remplacez $color-1 par une couleur de fond appropriée */
+        border-radius: 8px; /* Remplacez $borderRadius par la valeur appropriée */
         padding: 2rem;
         box-shadow: 0 10px 10px #333;
         animation: popup .6s ease forwards;
-        transform: scale(0);
-        transform-origin: center;
-
+    
         @keyframes popup {
           to {
-            transform: scale(1);
-          } 
+            transform: translate(-50%, -50%) scale(1); /* Garder la transformation centrée */
+          }
         }
       }
+    
       .head {
         display: flex;
         justify-content: space-around;
         margin: 1rem 0;
       }
+    
       h2 {
         text-align: left;
         margin-bottom: 1rem;
       }
+    
       .button {
         cursor: pointer;
-        color: $color-1;
-        background: $color-5;
-        border-radius: $borderRadius;
+        color: $color-1; /* Remplacez $color-1 par une couleur de texte appropriée */
+        background: $color-5; /* Remplacez $color-5 par une couleur de fond appropriée */
+        border-radius: 8px; /* Remplacez $borderRadius par la valeur appropriée */
         padding: 1rem;
         transition: .2s;
-
+    
         &:hover {
-          background: $color-4;
+          background: $color-4; /* Remplacez $color-4 par une couleur de survol appropriée */
         }
       }
+    
       .text {
         text-align: justify;
         padding-bottom: 1rem;
       }
+    
       .return {
         margin: 1rem auto;
         width: 200px;
       }
     }
+    
   }
 }
 @media (max-width: 650px) and (min-width: 521px){
