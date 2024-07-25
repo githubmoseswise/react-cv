@@ -1,16 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom'; // Importer BrowserRouter
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import initializeGA from './ga4'; // Importer la fonction d'initialisation Google Analytics
 import './styles/styles.scss';
+
+// Initialiser Google Analytics
+initializeGA();
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Wrapper pour utiliser useLocation dans App
+const AppWithRouter = () => (
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <AppWithRouter />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// Si vous souhaitez commencer à mesurer les performances de votre application, passez une fonction
+// pour enregistrer les résultats (par exemple : reportWebVitals(console.log))
+// ou envoyez à un point de terminaison d'analyse. En savoir plus : https://bit.ly/CRA-vitals
 reportWebVitals();
