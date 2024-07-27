@@ -96,4 +96,34 @@ export const portfolioData = [
     info: "Moteur de recherche gratuit et libre d'accès en Afrique et dans le monde",
     picture: "./media/project3.JPG",
   },
+
+  {
+    id: 10,
+    name: "DisplayDifficulty",
+    languages: ["react"],
+    languagesIcons: ["fab fa-react"],
+    source: "https://moseswise-react-displaydifficulty.netlify.app",
+    info: "J'ai développé cette application histoire de m'entrainer, choisi ton niveau de difficulter et voir le resultat",
+    picture: "./media/project3.JPG",
+  },
+
+  {
+    id: 11,
+    name: "Moseswise-react-cv",
+    languages: ["react"],
+    languagesIcons: ["fab fa-react"],
+    source: "https://moseswise.netlify.app",
+    info: "Mon portfolio",
+    picture: "./media/project3.JPG",
+  },
+
+  {
+    id: 12,
+    name: "moseswise-react-tv-show",
+    languages: ["react"],
+    languagesIcons: ["fab fa-react"],
+    source: "https://moseswise-react-tv-show.netlify.app",
+    info: "Trouver un film qui pourrait vous interresser",
+    picture: "./media/project3.JPG",
+  },
 ];
