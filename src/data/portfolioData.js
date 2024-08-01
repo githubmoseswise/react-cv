@@ -126,4 +126,14 @@ export const portfolioData = [
     info: "Trouver un film qui pourrait vous interresser",
     picture: "./media/project3.JPG",
   },
+
+  {
+    id: 13,
+    name: "African countries",
+    languages: ["react"],
+    languagesIcons: ["fab fa-react"],
+    source: "https://moseswise-react-african-countries.netlify.app/",
+    info: "African countries",
+    picture: "./media/project3.JPG",
+  },
 ];
