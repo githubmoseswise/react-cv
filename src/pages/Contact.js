@@ -13,7 +13,7 @@ const Contact = () => {
                     <ul>
                         <li> 
                             <i className="fas fa-map-marker-alt"></i>
-                            <span> Côte d'Ivoire</span>
+                            <span> Béénin</span>
                         </li>
                         <li> 
                             <i className="fas fa-mobile-marker-alt"></i>
@@ -21,7 +21,7 @@ const Contact = () => {
                                 <span className="clickInput" onClick={()=>{
                                     alert("Télephone copié !");
                                 }}>
-                                +225 0556117423
+                                +229 96658434
                                 </span>
                             </CopyToClipboard>
                         </li>
