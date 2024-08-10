@@ -26,11 +26,11 @@ const OtherSikills = () => {
         <ul>
           <li>
             {" "}
-            <i className="fas fa-check-square"></i> Figma
+            <i className="fas fa-check-square"></i> SuperMap
           </li>
           <li>
             {" "}
-            <i className="fas fa-check-square"></i> UI/UX Design
+            <i className="fas fa-check-square"></i> SuperGéo
           </li>
           <li>
             {" "}
