@@ -1,13 +1,13 @@
 export const portfolioData = [
-  {
-    id: 1,
-    name: "F&MMCI",
-    languages: ["wordpress", "javascript", "css"],
-    languagesIcons: ["fab fa-wordpress"],
-    source: "https://fmmci.net/",
-    info: "FMMCI est une société de Consulting qui fournit des produits et équipements de technologies, d’ingénierie et scientifiques aux clients du gouvernement et dans divers secteurs tels que Télécoms, Energies, Industrie manufacturière, sécurités nationales, Banque et Finance, Santé, Automobile, Assurance, Aéronautique et défense, Hôtellerie et voyage, Infrastructure et Transport, Environnement, Education, F&MMCI Motors etc.",
-    picture: "./media/project1.JPG",
-  },
+  // {
+  //   id: 1,
+  //   name: "F&MMCI",
+  //   languages: ["wordpress", "javascript", "css"],
+  //   languagesIcons: ["fab fa-wordpress"],
+  //   source: "https://fmmci.net/",
+  //   info: "FMMCI est une société de Consulting qui fournit des produits et équipements de technologies, d’ingénierie et scientifiques aux clients du gouvernement et dans divers secteurs tels que Télécoms, Energies, Industrie manufacturière, sécurités nationales, Banque et Finance, Santé, Automobile, Assurance, Aéronautique et défense, Hôtellerie et voyage, Infrastructure et Transport, Environnement, Education, F&MMCI Motors etc.",
+  //   picture: "./media/project1.JPG",
+  // },
   // {
   //   id: 2,
   //   name: "SUPERMAPCI",
