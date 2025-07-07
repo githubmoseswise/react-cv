@@ -3,14 +3,16 @@ import Navigation from '../components/Navigation';
 
 const Home = () => {
     return (
-        <div className="home">
+        <div className="home super-home-bg">
             <Navigation />
             <div className="homeContent">
-                <div className="content">
-                    <h1>AGBOSSAGA Moïse</h1>
-                    <h2>Développeur full stack & Mobile</h2>
+                <div className="content animated-fadein">
+                    <h1 className="main-title">AGBOSSAGA Moïse</h1>
+                    <h2 className="subtitle">Développeur full stack & Mobile</h2>
                     <div className="pdf">
-                        <a href="https://drive.google.com/file/d/1Fw-S_aai0vtqPsj2kG9eW94dEpsYfQkh/view?usp=sharing" target="_blank" rel="noopener noreferrer">Télécharger CV</a>
+                        <a className="cv-btn" href="https://drive.google.com/file/d/1Fw-S_aai0vtqPsj2kG9eW94dEpsYfQkh/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                            <i className="fas fa-download"></i> Télécharger CV
+                        </a>
                     </div>
                 </div>
             </div>

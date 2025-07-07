@@ -6,8 +6,27 @@ import Knownledges from './pages/Knownledges';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
 import NotFound from './pages/NotFound';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 
 // Assurez-vous que la fonction d'initialisation Google Analytics est appelée dans index.js
+
+const theme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#1976d2',
+    },
+    secondary: {
+      main: '#ff4081',
+    },
+    background: {
+      default: '#f5f7fa',
+    },
+  },
+  typography: {
+    fontFamily: 'Roboto, Arial, sans-serif',
+  },
+});
 
 const App = () => {
   const location = useLocation();
@@ -18,13 +37,16 @@ const App = () => {
   }, [location]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/competences" element={<Knownledges />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/competences" element={<Knownledges />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </ThemeProvider>
   );
 };
 

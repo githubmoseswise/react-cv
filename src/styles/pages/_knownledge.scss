@@ -5,26 +5,38 @@
       position: relative;
       overflow: hidden;
       display: grid;
-      grid-template-columns: 38% 1fr 1fr;
+      grid-template-columns: 0.2fr 1fr 0.2fr;
       grid-template-rows: 70% 30%;
       grid-template-areas: 
         "L E E"
         "O O H";
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
 
       .languagesFrameworks, .experience, .otherSkills, .hobbies {
         background: $color-2;
-        border-radius: $borderRadius;
-        padding: .8rem;
-        box-shadow: 
-        0 10px 46px rgba(0, 0, 0, 0.1), /* Ombre légère */
-        0 20px 40px rgba(0, 0, 0, 0.1); 
+        border-radius: $borderRadius * 2;
+        padding: 1.2rem 1.5rem;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+        transition: box-shadow 0.3s, transform 0.3s;
+        animation: fadeInCard 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+        &:hover {
+          box-shadow: 0 12px 40px rgba(0,0,0,0.16), 0 2px 8px rgba(0,0,0,0.10);
+          transform: translateY(-4px) scale(1.02);
+        }
       }
       h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
         font-family: $font-2;
-        color: $color-5;
+        color: $color-4;
         text-transform: uppercase;
+        letter-spacing: 1.5px;
+        border-left: 4px solid $color-3;
+        padding-left: 0.7rem;
+        background: linear-gradient(90deg, rgba($color-3,0.08) 0%, transparent 100%);
+        border-radius: 0 1rem 1rem 0;
+        font-weight: 700;
       }
 
       .square-bullets {
@@ -46,7 +58,7 @@
         transform: translateY(-50%); /* Ajuste l'alignement vertical */
         width: 10px; /* Largeur de la puce */
         height: 10px; /* Hauteur de la puce */
-        background-color: #000; /* Couleur de la puce */
+        background-color: $color-4;
         border-radius: 2px; /* Rend la puce carrée */
       }
   
@@ -59,68 +71,62 @@
         grid-template-areas: 
           "L"
           "F";
-  
-        .languageDisplay {
-          grid-area: L;
-        }
-        .frameworkDisplay {
-          grid-area: F;
+        padding: 2rem 2.5rem;
+        background: linear-gradient(120deg, lighten($color-2, 8%) 60%, #fff 100%);
+        border-radius: $borderRadius * 2.5;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
+        transition: box-shadow 0.3s, transform 0.3s;
+        animation: fadeInCard 1.1s cubic-bezier(0.23, 1, 0.32, 1);
+        &:hover {
+          box-shadow: 0 12px 40px rgba(0,0,0,0.16), 0 2px 8px rgba(0,0,0,0.10);
+          transform: translateY(-4px) scale(1.02);
         }
         h3 {
-          margin-bottom: 0.3rem;
+          font-size: 2rem;
+          margin-bottom: 1.5rem;
+          color: $color-4;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          border-left: 5px solid $color-3;
+          padding-left: 1rem;
+          background: linear-gradient(90deg, rgba($color-3,0.08) 0%, transparent 100%);
+          border-radius: 0 1rem 1rem 0;
+          font-weight: 700;
         }
-  
         .years {
-          font-size: .65rem;
+          font-size: .95rem;
           display: flex;
           justify-content: space-between;
           color: $black;
-  
-          span {
-            width: 36%;
-  
-            &:nth-child(2){
-              text-align: center; 
-              width: 20%;
-            }
-            &:nth-child(3){
-              text-align: right;
-              width: 44%;
-            }
-          
-            &:nth-child(2):before,
-            &:nth-child(3):before {
-              content:'';
-              background: rgba(180, 179, 179, 0.507);
-              position: absolute;
-              height: 146px;
-              width: 1px;
-              transform: translate(9px, 19px);
-            }
-          }
+          margin-bottom: 1.2rem;
         }
         .languagesList {
-          padding-top: .5rem;
-  
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          margin-bottom: 1.5rem;
           li {
             color: $color-1;
+            font-size: 1.15rem;
+            font-weight: 600;
+            min-width: 90px;
           }
           .progressBar {
-            height: .4rem;
-            background: transparent;
+            flex: 1;
+            height: 1rem;
+            background: $color-1;
             border-radius: 50px;
-            margin-top: 0.2rem;
             position: relative;
-  
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             &:after {
               content: '';
               position: absolute;
-              background: $color-3;
+              background: linear-gradient(90deg, $color-3 60%, $color-4 100%);
               border-radius: 50px;
-              height: .4rem;
+              height: 1rem;
               width: 0;
-              animation: line 2s ease-out forwards;
-  
+              animation: line 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
               @keyframes line {
                 to {
                   width: 100%;
@@ -259,3 +265,14 @@
       }
     }
   }
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
