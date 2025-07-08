@@ -21,4 +21,5 @@ const Knownledges = () => {
     );
 };
 
+
 export default Knownledges;
