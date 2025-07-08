@@ -1,278 +1,185 @@
-.knowledges {
-    .knowledgesContent {
-      min-height: $minHeight;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 0.2fr 1fr 0.2fr;
-      grid-template-rows: 70% 30%;
-      grid-template-areas: 
-        "L E E"
-        "O O H";
-      gap: 1.5rem;
-      margin-bottom: 2.5rem;
+/**
+ * Design professionnel, sobre et élégant pour la page Compétences
+ */
+.competences-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  font-family: 'Inter', 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
 
-      .languagesFrameworks, .experience, .otherSkills, .hobbies {
-        background: $color-2;
-        border-radius: $borderRadius * 2;
-        padding: 1.2rem 1.5rem;
-        box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
-        transition: box-shadow 0.3s, transform 0.3s;
-        animation: fadeInCard 1.1s cubic-bezier(0.23, 1, 0.32, 1);
-        &:hover {
-          box-shadow: 0 12px 40px rgba(0,0,0,0.16), 0 2px 8px rgba(0,0,0,0.10);
-          transform: translateY(-4px) scale(1.02);
-        }
-      }
-      h3 {
-        font-size: 1.6rem;
-        margin-bottom: 1.2rem;
-        font-family: $font-2;
-        color: $color-4;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        border-left: 4px solid $color-3;
-        padding-left: 0.7rem;
-        background: linear-gradient(90deg, rgba($color-3,0.08) 0%, transparent 100%);
-        border-radius: 0 1rem 1rem 0;
-        font-weight: 700;
-      }
+.languagesFrameworks, .experience, .otherSkills, .hobbies {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e6eaf0;
+  box-shadow: 0 2px 8px rgba(30,40,90,0.04);
+  padding: 2.2rem 2.5rem;
+  transition: box-shadow 0.18s, transform 0.18s, background 0.18s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  margin-bottom: 0.5rem;
+}
+.languagesFrameworks:hover, .experience:hover, .otherSkills:hover, .hobbies:hover {
+  box-shadow: 0 8px 24px rgba(30,40,90,0.08);
+  background: #f7fafd;
+  transform: translateY(-2px) scale(1.01);
+}
 
-      .square-bullets {
-        list-style: none; /* Supprime les puces par défaut */
-        padding: 0; /* Supprime le padding par défaut */
-      }
-      .square-bullets li {
-        position: relative;
-        padding-left: 2rem; /* Espace pour la puce */
-        margin-bottom: 0.5rem; /* Espace entre les éléments */
-        line-height: 1.5; /* Hauteur de ligne pour un meilleur espacement */
-      }
+.languagesFrameworks h3, .experience h3, .otherSkills h3, .hobbies h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1.1rem;
+  color: #1a2236;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-left: 3px solid #0099cc;
+  padding-left: 0.7rem;
+  background: none;
+  border-radius: 0 1rem 1rem 0;
+}
 
-      .square-bullets li::before {
-        content: ''; /* Pas de texte, juste une puce */
-        position: absolute;
-        left: 0; /* Aligne la puce à gauche */
-        top: 50%; /* Aligne la puce verticalement au centre de l'élément */
-        transform: translateY(-50%); /* Ajuste l'alignement vertical */
-        width: 10px; /* Largeur de la puce */
-        height: 10px; /* Hauteur de la puce */
-        background-color: $color-4;
-        border-radius: 2px; /* Rend la puce carrée */
-      }
-  
-      .languagesFrameworks {
-        grid-area: L;
-        margin-bottom: .5rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-          "L"
-          "F";
-        padding: 2rem 2.5rem;
-        background: linear-gradient(120deg, lighten($color-2, 8%) 60%, #fff 100%);
-        border-radius: $borderRadius * 2.5;
-        box-shadow: 0 6px 24px rgba(0,0,0,0.10), 0 1.5px 6px rgba(0,0,0,0.08);
-        transition: box-shadow 0.3s, transform 0.3s;
-        animation: fadeInCard 1.1s cubic-bezier(0.23, 1, 0.32, 1);
-        &:hover {
-          box-shadow: 0 12px 40px rgba(0,0,0,0.16), 0 2px 8px rgba(0,0,0,0.10);
-          transform: translateY(-4px) scale(1.02);
-        }
-        h3 {
-          font-size: 2rem;
-          margin-bottom: 1.5rem;
-          color: $color-4;
-          text-transform: uppercase;
-          letter-spacing: 1.5px;
-          border-left: 5px solid $color-3;
-          padding-left: 1rem;
-          background: linear-gradient(90deg, rgba($color-3,0.08) 0%, transparent 100%);
-          border-radius: 0 1rem 1rem 0;
-          font-weight: 700;
-        }
-        .years {
-          font-size: .95rem;
-          display: flex;
-          justify-content: space-between;
-          color: $black;
-          margin-bottom: 1.2rem;
-        }
-        .languagesList {
-          display: flex;
-          align-items: center;
-          gap: 1.2rem;
-          margin-bottom: 1.5rem;
-          li {
-            color: $color-1;
-            font-size: 1.15rem;
-            font-weight: 600;
-            min-width: 90px;
-          }
-          .progressBar {
-            flex: 1;
-            height: 1rem;
-            background: $color-1;
-            border-radius: 50px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            &:after {
-              content: '';
-              position: absolute;
-              background: linear-gradient(90deg, $color-3 60%, $color-4 100%);
-              border-radius: 50px;
-              height: 1rem;
-              width: 0;
-              animation: line 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-              @keyframes line {
-                to {
-                  width: 100%;
-                }
-              }
-            }
-          }
-        }
-      }
-      .experience {
-        grid-area: E;
-        margin: 0 0 .5rem .5rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 10% 1fr 1fr;
-        grid-template-areas: 
-          "1"
-          "2"
-          "3";
-        
-        h3 {
-          grid-area: 1;
-        }
-        h4 {
-          font-size: 1.1rem;
-          color: $color-5;
-        }
-        h5 {
-          color: $color-3;
-          padding: 0.5rem 0 0.5rem 1rem;
-        }
-        p {
-          text-align: justify;
-          padding: 0 1rem;
-          font-size: 11px;
-        }
-        .exp-1 {
-          grid-area: 2;
-        }
-        .exp-2 {
-          grid-area: 3;
-        }
+.section-separator {
+  width: 100%;
+  height: 1px;
+  background: #e6eaf0;
+  margin: 2rem 0 1.5rem 0;
+  border: none;
+}
 
-        overflow-y: auto;
-      }
-      .otherSkills {
-        grid-area: O;
-        margin-right: 0.5rem;
-  
-        .list {
-          display: flex;
-          width: 80%;
-          height: 100%;
-          margin: 0 auto;
-          justify-content: space-between;
-  
-          ul {
-            height: 80%;
-            display: grid;
-  
-            i {
-              color: $color-5;
-            }
-          }
-        }
-      }
-      .hobbies {
-        grid-area: H;
-        padding-left: 1.5rem;
-  
-        ul {
-          height: 80%;
-          display: grid;
-  
-          li {
-            i {
-              position: absolute;
-              color: $color-5;
-            }
-            span {
-              position: absolute;
-              transform: translateX(2.2rem);
-            }
-          }
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 950px){
-    .knowledgesContent {
-      h3 {
-        font-size: 1.2rem !important;
-      }
-      .languagesList {
-        padding-top: .2rem !important;
-      }
-      p {
-        font-size: .8rem;
-      }
-      .otherSkills, .hobbies {
-        font-size: .8rem;
-      }
-    }
-  }
-  @media screen and (max-width: 850px){
-    .knowledgesContent {
-      h4 {
-        font-size: .9rem !important;
-      }
-      h5 {
-        font-size: .6rem !important;
-        padding: .2rem 1rem !important;
-      }
-    }
-  }
-  @media screen and (max-width: 500px){
-    .knowledgesContent {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-      grid-template-rows: 1fr 1fr 180px 180px !important;
-      
-      .languages {
-        grid-area: 1 !important;
-      }
-      .experience {
-        grid-area: 2 !important;
-        margin-left: 0 !important;
-      }
-      .otherSkills {
-        grid-area: 3 !important;
-        margin-right: 0 !important;
-      }
-      .hobbies {
-        grid-area: 4 !important;
-        margin-top: .5rem !important;
-      }
-    }
-  }
+/* Barres de progression fines et élégantes */
+.progressBar {
+  background: #f0f3f8;
+  border-radius: 50px;
+  height: 0.6rem;
+  margin-bottom: 1.1rem;
+  box-shadow: none;
+  overflow: hidden;
+  position: relative;
+}
+.progressBar .progress {
+  background: linear-gradient(90deg, #0099cc 60%, #00d4ff 100%);
+  height: 100%;
+  border-radius: 50px;
+  transition: width 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-@keyframes fadeInCard {
-  0% {
-    opacity: 0;
-    transform: translateY(40px) scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
+.language-list, .framework-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.2rem 0;
+}
+.language-list li, .framework-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f0f3f8;
+  font-size: 1.05rem;
+  color: #25304a;
+}
+.language-list li:last-child, .framework-list li:last-child {
+  border-bottom: none;
+}
+.level-badge {
+  background: #eaf6fb;
+  color: #0099cc;
+  border-radius: 12px;
+  font-size: 0.93rem;
+  padding: 0.18rem 0.7rem;
+  font-weight: 500;
+  border: 1px solid #b6eaff;
+}
+
+/* Timeline expérience sobre */
+.experience {
+  padding-bottom: 0.5rem;
+}
+.timeline {
+  position: relative;
+  margin-left: 1.2rem;
+  padding-left: 1.2rem;
+  border-left: 2px solid #e6eaf0;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.1rem;
+}
+.timeline-point {
+  position: absolute;
+  left: -1.35rem;
+  top: 0.35rem;
+  width: 11px;
+  height: 11px;
+  background: #0099cc;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #e6eaf0;
+}
+.timeline-title {
+  font-weight: 600;
+  color: #1a2236;
+  font-size: 1.07rem;
+}
+.timeline-date {
+  color: #0099cc;
+  font-size: 0.97rem;
+  margin-bottom: 0.18rem;
+  font-style: italic;
+}
+.timeline-desc {
+  color: #3a4a5d;
+  font-size: 0.97rem;
+  margin-top: 0.18rem;
+  margin-bottom: 0.45rem;
+}
+.timeline-list {
+  margin: 0.18rem 0 0.45rem 0;
+  padding-left: 1.1rem;
+  color: #4a5a6d;
+  font-size: 0.96rem;
+}
+.timeline-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* Tags pour autres compétences et hobbies, style pro */
+.otherSkills, .hobbies {
+  padding-bottom: 0.5rem;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0;
+  margin: 0;
+}
+.tag {
+  background: #f0f3f8;
+  color: #0099cc;
+  border-radius: 14px;
+  padding: 0.42rem 1.1rem;
+  font-weight: 500;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid #e6eaf0;
+  box-shadow: none;
+}
+.tag i {
+  color: #0099cc;
+}
+
+@media (max-width: 900px) {
+  .competences-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 }

@@ -7,14 +7,16 @@ import Hobbies from '../components/knownledges/Hobbies';
 
 const Knownledges = () => {
     return (
-        <div className="knowledges">
+        <div className="container">
             <Navigation/>
-            <div className="knowledgesContent">
-                <Languages/>
-                <Experience/>
-                <OtherSikills/>
-                <Hobbies/>
-            </div>
+            <main className="main-content">
+                <div className="competences-content">
+                    <Languages/>
+                    <Experience/>
+                    <OtherSikills/>
+                    <Hobbies/>
+                </div>
+            </main>
         </div>
     );
 };
